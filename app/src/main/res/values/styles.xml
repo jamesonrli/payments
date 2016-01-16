@@ -1,0 +1,41 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="HeadlineStyle">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="TOSTextStyle">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+
+    <style name="SignupInputFieldStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">3dp</item>
+    </style>
+
+    <style name="ConfirmButtonStyle">
+        <item name="android:layout_height">45dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@drawable/rounded_button</item>
+    </style>
+
+    <style name="ConfirmButtonTextStyle">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>

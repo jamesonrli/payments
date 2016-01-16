@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">PaymentDemo</string>
+    <string name="signup_headline">Easy Monthly Payments</string>
+    <string name="signup_label_first_last_name">First and Last Name</string>
+    <string name="signup_label_email_address">Email Address</string>
+    <string name="signup_label_mobile_number">Mobile Number</string>
+    <string name="signup_label_dob">Date of Birth</string>
+    <string name="signup_label_ssn">Last 4 of SSN</string>
+    <string name="signup_tos">By creating an account, I authorize Payment to obtain my credit report, and I agree to the Terms of Service and Electronic Disclosures</string>
+    <string name="signup_label_confirm_button">CREATE ACCOUNT</string>
+</resources>
