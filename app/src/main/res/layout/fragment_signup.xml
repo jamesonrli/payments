@@ -53,7 +53,7 @@
             android:layout_height="@dimen/signup_button_secure_icon_width_height"
             android:layout_centerVertical="true"
             android:layout_marginLeft="@dimen/signup_button_secure_icon_margin_left"
-            android:background="@drawable/Lock"/>
+            android:background="@drawable/lock"/>
 
         <TextView
             android:layout_width="wrap_content"
