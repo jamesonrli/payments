@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">@android:color/darker_gray</color>
+    <color name="colorPrimary">#C0C0C0</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
     <color name="mainColor">#3ABC7F</color>
     <color name="lockColor">#43A0E2</color>
     <color name="checkColor">#02AC5F</color>
+    <color name="selectorColor">#1292D6</color>
 </resources>

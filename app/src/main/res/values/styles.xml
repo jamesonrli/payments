@@ -30,11 +30,25 @@
         <item name="android:background">@drawable/rounded_button</item>
     </style>
 
+    <style name="SelectorButtonStyle">
+        <item name="android:layout_height">45dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@drawable/rounded_corners_button</item>
+    </style>
+
     <style name="ConfirmButtonTextStyle">
         <item name="android:textColor">@android:color/white</item>
         <item name="android:padding">5dp</item>
         <item name="android:layout_centerInParent">true</item>
         <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="LoanSelectorButtonTextStyle">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:textSize">15sp</item>
         <item name="android:textStyle">bold</item>
     </style>
 

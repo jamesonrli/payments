@@ -20,6 +20,18 @@
         android:text="What fits your budget?"
         style="@style/SublineStyle" />
 
+    <LinearLayout
+        android:id="@+id/details_loan_options_list"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/button_rounded_corners" />
+        <include layout="@layout/button_rounded_corners" />
+        <include layout="@layout/button_rounded_corners" />
+
+    </LinearLayout>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
