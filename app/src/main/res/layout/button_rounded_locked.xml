@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ConfirmButtonStyle">
+
+    <ImageView
+        android:layout_width="@dimen/checkout_flow_button_secure_icon_width_height"
+        android:layout_height="@dimen/checkout_flow_button_secure_icon_width_height"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/checkout_flow_button_secure_icon_margin_left"
+        android:background="@drawable/lock"/>
+
+    <TextView
+        android:id="@+id/button_rounded_locked_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/signup_label_confirm_button"
+        style="@style/ConfirmButtonTextStyle" />
+
+</RelativeLayout>

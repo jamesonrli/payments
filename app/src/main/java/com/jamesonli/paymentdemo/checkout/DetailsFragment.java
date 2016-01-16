@@ -11,17 +11,17 @@ import com.jamesonli.paymentdemo.R;
 /**
  * Created by james on 1/15/16.
  */
-public class VerificationFragment extends Fragment {
+public class DetailsFragment extends Fragment {
 
-    public static VerificationFragment getInstance() {
-        return new VerificationFragment();
+    public static DetailsFragment getInstance() {
+        return new DetailsFragment();
     }
 
-    public VerificationFragment() {}
+    public DetailsFragment() {}
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_verify, container, false);
+        return inflater.inflate(R.layout.fragment_details, container, false);
     }
 
     @Override
@@ -29,6 +29,6 @@ public class VerificationFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         TextView confirmButtonLabel = (TextView) view.findViewById(R.id.button_rounded_locked_label);
-        confirmButtonLabel.setText(R.string.verify_button_label);
+        confirmButtonLabel.setText(R.string.details_confirm_button_label);
     }
 }

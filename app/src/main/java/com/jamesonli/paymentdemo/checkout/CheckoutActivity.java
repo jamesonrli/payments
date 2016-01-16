@@ -6,7 +6,7 @@ import android.app.FragmentManager;
 import android.os.Bundle;
 import com.jamesonli.paymentdemo.R;
 
-public class CheckoutActivity extends Activity {
+public class CheckoutActivity extends Activity implements CheckoutInteraction {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,4 +20,10 @@ public class CheckoutActivity extends Activity {
         FragmentManager fragmentManager = getFragmentManager();
         fragmentManager.beginTransaction().replace(container, fragment).commit();
     }
+
+    @Override
+    public void confirmationButtonHandler() {
+
+    }
+
 }

@@ -7,30 +7,24 @@
     android:layout_gravity="center"
     android:gravity="center">
 
-    <ImageView
-        android:layout_width="@dimen/verify_icon_bottom_margin"
-        android:layout_height="40dp"
-        android:layout_marginBottom="20dp"
-        android:backgroundTint="@color/lockColor"
-        android:background="@drawable/lock"/>
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/verify_headline"
+        android:text="You're approved for $%.2f!"
         android:layout_marginBottom="@dimen/checkout_flow_headline_bottom_margin"
         style="@style/HeadlineStyle" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/verify_message"
+        android:text="What fits your budget?"
         style="@style/SublineStyle" />
 
-    <EditText
-        style="@style/CheckoutFlowInputFieldStyle"
-        android:inputType="number"
-        android:hint="Security Pin" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="First Payment due on or after %s\nBy confirming this charge I agree to the Loan Terms"
+        style="@style/SublineStyle" />
 
     <include layout="@layout/button_rounded_locked" />
 
