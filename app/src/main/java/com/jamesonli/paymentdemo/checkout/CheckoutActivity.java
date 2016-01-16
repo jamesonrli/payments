@@ -14,6 +14,7 @@ public class CheckoutActivity extends Activity implements CheckoutInteraction {
         setContentView(R.layout.activity_checkout);
 
         switchContainerFragment(SignUpFragment.getInstance(), R.id.checkout_container);
+        switchContainerFragment(DetailsFragment.getInstance(), R.id.checkout_container);
     }
 
     private void switchContainerFragment(Fragment fragment, int container) {

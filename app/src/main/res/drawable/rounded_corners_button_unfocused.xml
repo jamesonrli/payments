@@ -4,6 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <corners android:radius="10dp" />
-    <gradient android:startColor="@color/selectorColor" android:centerColor="@color/selectorColor" android:endColor="@color/selectorColor" android:angle="90" />
+    <stroke android:color="@color/selectorColor" android:width="2dp"/>
+    <gradient android:startColor="@android:color/white" android:centerColor="@android:color/white" android:endColor="@android:color/white" android:angle="90" />
 
 </shape>

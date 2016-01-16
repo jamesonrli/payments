@@ -4,13 +4,16 @@
     android:gravity="center"
     android:layout_marginTop="5dp"
     android:layout_marginBottom="5dp"
+    android:clickable="true"
     style="@style/SelectorButtonStyle">
 
     <TextView
         android:id="@+id/button_loan_option_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/signup_label_confirm_button"
+        android:text="$%.2f for %d months"
+        android:textColor="@color/loan_option_text_color"
+        android:duplicateParentState="true"
         style="@style/LoanSelectorButtonTextStyle" />
 
 </LinearLayout>
