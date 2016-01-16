@@ -8,4 +8,7 @@
     <string name="signup_label_ssn">Last 4 of SSN</string>
     <string name="signup_tos">By creating an account, I authorize Payment to obtain my credit report, and I agree to the Terms of Service and Electronic Disclosures</string>
     <string name="signup_label_confirm_button">CREATE ACCOUNT</string>
+    <string name="verify_headline">Account Verification</string>
+    <string name="verify_message">We sent a text message with a security pin to verify your phone number (415) 373-6849</string>
+    <string name="verify_button_label">VERIFY</string>
 </resources>

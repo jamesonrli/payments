@@ -2,7 +2,8 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <dimen name="signup_headline_bottom_margin">10dp</dimen>
-    <dimen name="signup_button_secure_icon_width_height">20dp</dimen>
-    <dimen name="signup_button_secure_icon_margin_left">15dp</dimen>
+    <dimen name="checkout_flow_headline_bottom_margin">10dp</dimen>
+    <dimen name="checkout_flow_button_secure_icon_width_height">20dp</dimen>
+    <dimen name="checkout_flow_button_secure_icon_margin_left">15dp</dimen>
+    <dimen name="verify_icon_bottom_margin">40dp</dimen>
 </resources>
