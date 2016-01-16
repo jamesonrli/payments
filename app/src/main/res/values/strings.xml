@@ -11,4 +11,5 @@
     <string name="verify_headline">Account Verification</string>
     <string name="verify_message">We sent a text message with a security pin to verify your phone number (415) 373-6849</string>
     <string name="verify_button_label">VERIFY</string>
+    <string name="approved_headline">Thank you for buying with Payments</string>
 </resources>
