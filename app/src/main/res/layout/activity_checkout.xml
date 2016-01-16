@@ -17,7 +17,8 @@
 
     <FrameLayout
         android:id="@+id/checkout_container"
-        android:layout_width="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_width="@dimen/checkout_container_width"
         android:layout_height="match_parent">
     </FrameLayout>
 

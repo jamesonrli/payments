@@ -2,7 +2,7 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:layout_width="300dp"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
     android:gravity="center">
@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="You're approved for $%.2f!"
+        android:text="@string/details_approved_text"
         android:layout_marginBottom="@dimen/checkout_flow_headline_bottom_margin"
         style="@style/HeadlineStyle" />
 
@@ -35,7 +35,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="@dimen/details_horiz_bar_margin_top"
         android:background="@drawable/simple_horizontal_line"/>
 
     <LinearLayout
@@ -47,19 +47,18 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Interest (%d% APR)\n$%.2f"
+            android:text="@string/details_loan_interest_text"
             style="@style/LoanDetailsTextStyle" />
 
         <ImageView
-            android:layout_width="40dp"
+            android:layout_width="@dimen/details_verti_bar_width"
             android:layout_height="match_parent"
-            android:rotation="90"
-            android:background="@drawable/simple_horizontal_line"/>
+            android:background="@drawable/simple_vertical_line"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Total of Payments\n$%.2f"
+            android:text="@string/details_loan_payments_text"
             style="@style/LoanDetailsTextStyle"/>
 
     </LinearLayout>
@@ -67,14 +66,13 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="@dimen/details_horiz_bar_margin_top"
         android:background="@drawable/simple_horizontal_line"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="First Payment due on or after %s\nBy confirming this charge I agree to the Loan Terms"
-        android:layout_marginBottom="15dp"
+        android:text="@string/details_loan_tos_text"
         style="@style/SublineStyle" />
 
     <include layout="@layout/button_rounded_locked" />

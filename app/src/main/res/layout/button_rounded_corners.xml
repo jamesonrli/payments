@@ -8,10 +8,10 @@
     style="@style/SelectorButtonStyle">
 
     <TextView
-        android:id="@+id/button_loan_option_label"
+        android:id="@+id/button_rounded_corners_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="$%.2f for %d months"
+        android:text="@string/button_loan_option_text"
         android:textColor="@color/loan_option_text_color"
         android:duplicateParentState="true"
         style="@style/LoanSelectorButtonTextStyle" />

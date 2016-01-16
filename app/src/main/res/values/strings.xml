@@ -13,4 +13,10 @@
     <string name="verify_button_label">VERIFY</string>
     <string name="approved_headline">Thank you for buying with Payments</string>
     <string name="details_confirm_button_label">CONFIRM LOAN</string>
+    <string name="details_loan_tos_text">First Payment due on or after %s\nBy confirming this charge I agree to the Loan Terms</string>
+    <string name="details_approved_text">You\'re approved for $%.2f!</string>
+    <string name="details_loan_interest_text" formatted="false">Interest (%d% APR)\n$%.2f</string>
+    <string name="details_loan_payments_text" formatted="false">Total of Payments\n$%.2f</string>
+    <string name="button_loan_option_text" formatted="false">$%.2f for %d months</string>
+    <string name="security_pin_hint">Security Pin</string>
 </resources>
