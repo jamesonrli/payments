@@ -5,9 +5,13 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 import com.jamesonli.paymentdemo.R;
 import com.jamesonli.paymentdemo.common.LoanConstants;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 /**
  * Created by james on 1/15/16.
@@ -58,18 +62,38 @@ public class DetailsFragment extends Fragment {
     private void setCheckoutData(View view) {
         if(checkoutData == null) { return; }
 
+        // headline
         TextView headline = (TextView) view.findViewById(R.id.details_headline);
         headline.setText(String.format(getString(R.string.details_approved_text),
                 checkoutData.getApprovedAmount()));
 
+        // apr
         TextView interestView = (TextView) view.findViewById(R.id.details_interest_text);
         interestView.setText(String.format(getString(R.string.details_loan_interest_text),
                 checkoutData.getAPR(),
                 checkoutData.getInterestAmount()));
 
+        // total payment
         TextView totalView = (TextView) view.findViewById(R.id.details_total_payments_text);
         totalView.setText(String.format(getString(R.string.details_loan_payments_text),
                 checkoutData.getPaymentTotal()));
+
+        // tos
+        TextView tosView = (TextView) view.findViewById(R.id.details_tos_text);
+        tosView.setText(String.format(getString(R.string.details_loan_tos_text),
+                checkoutData.getFirstDueDate()));
+
+        // loan options
+        populateLoanOptions(view);
+    }
+
+    private void populateLoanOptions(View view) {
+        JSONArray optionArray = checkoutData.getLoanOptions();
+        LinearLayout loanOptionsContainer = (LinearLayout) view.findViewById(R.id.details_loan_options_list);
+
+        for(int i=0; i<optionArray.length(); i++) {
+//            loanOptionsContainer.addView()
+        }
     }
 
 }

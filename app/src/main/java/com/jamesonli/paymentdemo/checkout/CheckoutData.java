@@ -28,6 +28,7 @@ public class CheckoutData {
         try {
             data.put(LoanConstants.APPROVED_AMOUNT, 1000);
             data.put(LoanConstants.INTEREST, 20);
+            data.put(LoanConstants.FIRST_DUE_DATE, "Feb 20, 2016");
 
             JSONArray loanOptions = new JSONArray();
 
@@ -62,11 +63,11 @@ public class CheckoutData {
     }
 
     public double getInterestAmount() {
-        return 13.94; //TODO: calculate value
+        return 13.94; //TODO: calculate value based on selected option
     }
 
     public double getPaymentTotal() {
-        return 287.98;
+        return 287.98; //TODO: calculate value based on selected option
     }
 
     public double getApprovedAmount() {
@@ -75,5 +76,13 @@ public class CheckoutData {
 
     public int getAPR() {
         return loanData.optInt(LoanConstants.INTEREST);
+    }
+
+    public JSONArray getLoanOptions() {
+        return loanData.optJSONArray(LoanConstants.LOAN_OPTIONS);
+    }
+
+    public String getFirstDueDate() {
+        return loanData.optString(LoanConstants.FIRST_DUE_DATE);
     }
 }
