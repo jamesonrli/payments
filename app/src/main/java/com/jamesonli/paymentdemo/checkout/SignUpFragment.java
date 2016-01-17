@@ -13,8 +13,13 @@ import com.jamesonli.paymentdemo.R;
  */
 public class SignUpFragment extends Fragment {
 
-    public static SignUpFragment getInstance() {
-        return new SignUpFragment();
+    private CheckoutInteraction interaction;
+
+    public static SignUpFragment getInstance(CheckoutInteraction interaction) {
+        SignUpFragment fragment = new SignUpFragment();
+        fragment.interaction = interaction;
+
+        return fragment;
     }
 
     public SignUpFragment() {}
@@ -30,5 +35,13 @@ public class SignUpFragment extends Fragment {
 
         TextView confirmButtonLabel = (TextView) view.findViewById(R.id.button_rounded_locked_label);
         confirmButtonLabel.setText(R.string.signup_label_confirm_button);
+
+        View confirmButton = view.findViewById(R.id.button_submit);
+        confirmButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                interaction.confirmationButtonHandler(CheckoutFactory.CheckoutState.SIGNUP);
+            }
+        });
     }
 }

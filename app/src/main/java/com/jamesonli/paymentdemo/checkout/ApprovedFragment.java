@@ -12,8 +12,12 @@ import com.jamesonli.paymentdemo.R;
  */
 public class ApprovedFragment extends Fragment {
 
-    public static ApprovedFragment getInstance() {
-        return new ApprovedFragment();
+    private CheckoutInteraction interaction;
+
+    public static ApprovedFragment getInstance(CheckoutInteraction interaction) {
+        ApprovedFragment fragment = new ApprovedFragment();
+        fragment.interaction = interaction;
+        return fragment;
     }
 
     public ApprovedFragment() {}

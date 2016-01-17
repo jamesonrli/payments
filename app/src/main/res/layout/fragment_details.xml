@@ -8,6 +8,7 @@
     android:gravity="center">
 
     <TextView
+        android:id="@+id/details_headline"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/details_approved_text"
@@ -45,6 +46,7 @@
         android:layout_height="wrap_content">
 
         <TextView
+            android:id="@+id/details_interest_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/details_loan_interest_text"
@@ -56,6 +58,7 @@
             android:background="@drawable/simple_vertical_line"/>
 
         <TextView
+            android:id="@+id/details_total_payments_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/details_loan_payments_text"

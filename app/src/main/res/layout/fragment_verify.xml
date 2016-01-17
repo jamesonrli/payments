@@ -22,6 +22,7 @@
         style="@style/HeadlineStyle" />
 
     <TextView
+        android:id="@+id/verify_subline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/verify_message"
