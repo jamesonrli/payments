@@ -1,10 +1,14 @@
 package com.jamesonli.paymentdemo.checkout;
 
+import com.jamesonli.paymentdemo.checkout.loan.LoanOption;
 import com.jamesonli.paymentdemo.common.LoanConstants;
 import com.jamesonli.paymentdemo.common.PaymentCheckoutData;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by james on 1/16/16.
@@ -78,8 +82,17 @@ public class CheckoutData {
         return loanData.optInt(LoanConstants.INTEREST);
     }
 
-    public JSONArray getLoanOptions() {
-        return loanData.optJSONArray(LoanConstants.LOAN_OPTIONS);
+    public List<LoanOption> getLoanOptions() {
+        JSONArray optionsArray = loanData.optJSONArray(LoanConstants.LOAN_OPTIONS);
+        List<LoanOption> resultLoanOptions = new ArrayList<>();
+
+        for(int i=0; i<optionsArray.length(); i++) {
+            JSONObject curOption = optionsArray.optJSONObject(i);
+            resultLoanOptions.add(new LoanOption(curOption.optDouble(LoanConstants.AMOUNT_PER_MONTH),
+                    curOption.optInt(LoanConstants.NUM_MONTHS)));
+        }
+
+        return resultLoanOptions;
     }
 
     public String getFirstDueDate() {

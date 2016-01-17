@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    android:gravity="center">
+    android:gravity="center"
+    android:weightSum="1">
 
     <TextView
         android:id="@+id/details_headline"
@@ -21,17 +22,10 @@
         android:text="What fits your budget?"
         style="@style/SublineStyle" />
 
-    <LinearLayout
+    <android.support.v7.widget.RecyclerView
         android:id="@+id/details_loan_options_list"
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-
-        <include layout="@layout/button_rounded_corners" />
-        <include layout="@layout/button_rounded_corners" />
-        <include layout="@layout/button_rounded_corners" />
-
-    </LinearLayout>
+        android:layout_height="160dp" />
 
     <ImageView
         android:layout_width="match_parent"

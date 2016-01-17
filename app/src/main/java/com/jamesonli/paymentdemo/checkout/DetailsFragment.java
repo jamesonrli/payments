@@ -2,16 +2,14 @@ package com.jamesonli.paymentdemo.checkout;
 
 import android.app.Fragment;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
-import android.widget.ListView;
 import android.widget.TextView;
 import com.jamesonli.paymentdemo.R;
-import com.jamesonli.paymentdemo.common.LoanConstants;
-import org.json.JSONArray;
-import org.json.JSONObject;
+import com.jamesonli.paymentdemo.checkout.loan.LoanOptionsAdapter;
 
 /**
  * Created by james on 1/15/16.
@@ -20,6 +18,7 @@ public class DetailsFragment extends Fragment {
 
     private CheckoutInteraction interaction;
     private CheckoutData checkoutData;
+    private LoanOptionsAdapter loanOptionAdapter;
 
     public static DetailsFragment getInstance(CheckoutInteraction interaction) {
         DetailsFragment fragment = new DetailsFragment();
@@ -84,16 +83,10 @@ public class DetailsFragment extends Fragment {
                 checkoutData.getFirstDueDate()));
 
         // loan options
-        populateLoanOptions(view);
-    }
-
-    private void populateLoanOptions(View view) {
-        JSONArray optionArray = checkoutData.getLoanOptions();
-        LinearLayout loanOptionsContainer = (LinearLayout) view.findViewById(R.id.details_loan_options_list);
-
-        for(int i=0; i<optionArray.length(); i++) {
-//            loanOptionsContainer.addView()
-        }
+        RecyclerView loanOptionsView = (RecyclerView) view.findViewById(R.id.details_loan_options_list);
+        loanOptionsView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        loanOptionAdapter = new LoanOptionsAdapter(getActivity(), checkoutData.getLoanOptions());
+        loanOptionsView.setAdapter(loanOptionAdapter);
     }
 
 }

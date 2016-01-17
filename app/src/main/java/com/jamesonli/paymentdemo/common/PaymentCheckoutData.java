@@ -5,8 +5,8 @@ package com.jamesonli.paymentdemo.common;
  */
 public class PaymentCheckoutData {
 
-    private String description;
-    private double price;
+    public String description;
+    public double price;
 
     public PaymentCheckoutData(String description, double price) {
         this.description = description;
