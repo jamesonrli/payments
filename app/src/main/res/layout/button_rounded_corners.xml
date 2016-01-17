@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/button_rounded_corners_view"
     android:gravity="center"
-    android:layout_marginTop="5dp"
-    android:layout_marginBottom="5dp"
+    android:layout_marginTop="@dimen/button_rounded_corners_margin"
+    android:layout_marginBottom="@dimen/button_rounded_corners_margin"
     android:clickable="true"
     style="@style/SelectorButtonStyle">
 

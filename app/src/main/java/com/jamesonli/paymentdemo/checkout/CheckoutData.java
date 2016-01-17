@@ -66,12 +66,12 @@ public class CheckoutData {
         return phoneNumber;
     }
 
-    public double getInterestAmount() {
-        return 13.94; //TODO: calculate value based on selected option
+    public double getInterestAmount(LoanOption option) {
+        return option.amountPerMonth * option.numberOfMonths - loanData.optDouble(LoanConstants.APPROVED_AMOUNT);
     }
 
-    public double getPaymentTotal() {
-        return 287.98; //TODO: calculate value based on selected option
+    public double getPaymentTotal(LoanOption option) {
+        return option.amountPerMonth * option.numberOfMonths;
     }
 
     public double getApprovedAmount() {

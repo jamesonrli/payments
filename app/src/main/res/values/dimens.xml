@@ -11,4 +11,5 @@
     <dimen name="approved_check_size">40dp</dimen>
     <dimen name="checkout_container_width">300dp</dimen>
     <dimen name="verify_icon_size">40dp</dimen>
+    <dimen name="button_rounded_corners_margin">5dp</dimen>
 </resources>

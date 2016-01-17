@@ -16,10 +16,14 @@ public class LoanOptionsAdapter extends RecyclerView.Adapter<LoanOptionViewHolde
 
     private List<LoanOption> loanOptionList;
     private Context context;
+    private LoanOptionHandler handler;
 
-    public LoanOptionsAdapter(Context context, List<LoanOption> loanOptionList) {
+    private View currentSelectedButton;
+
+    public LoanOptionsAdapter(Context context, LoanOptionHandler handler, List<LoanOption> loanOptionList) {
         this.loanOptionList = loanOptionList;
         this.context = context;
+        this.handler = handler;
     }
 
     @Override
@@ -30,11 +34,27 @@ public class LoanOptionsAdapter extends RecyclerView.Adapter<LoanOptionViewHolde
     }
 
     @Override
-    public void onBindViewHolder(LoanOptionViewHolder holder, int position) {
-        LoanOption curOption = loanOptionList.get(position);
+    public void onBindViewHolder(final LoanOptionViewHolder holder, int position) {
+        final LoanOption curOption = loanOptionList.get(position);
+
+        // initially, select the first option
+        if(currentSelectedButton == null) {
+            currentSelectedButton = holder.buttonGroup;
+            currentSelectedButton.setSelected(true);
+        }
 
         holder.optionLabel.setText(String.format(context.getString(R.string.button_loan_option_text),
                 curOption.amountPerMonth, curOption.numberOfMonths));
+
+        holder.buttonGroup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                currentSelectedButton.setSelected(false); // disable 'selected' state of previous option
+                currentSelectedButton = holder.buttonGroup;
+                currentSelectedButton.setSelected(true); // enable 'selected' state of new option
+                handler.optionSelected(curOption);
+            }
+        });
     }
 
     @Override

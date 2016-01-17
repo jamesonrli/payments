@@ -12,10 +12,13 @@ import org.w3c.dom.Text;
 public class LoanOptionViewHolder extends RecyclerView.ViewHolder {
 
     TextView optionLabel;
+    View buttonGroup;
 
     public LoanOptionViewHolder(View itemView) {
         super(itemView);
 
         optionLabel = (TextView) itemView.findViewById(R.id.button_rounded_corners_label);
+        buttonGroup = itemView.findViewById(R.id.button_rounded_corners_view);
+
     }
 }

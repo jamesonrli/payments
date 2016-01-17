@@ -9,16 +9,20 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import com.jamesonli.paymentdemo.R;
+import com.jamesonli.paymentdemo.checkout.loan.LoanOption;
+import com.jamesonli.paymentdemo.checkout.loan.LoanOptionHandler;
 import com.jamesonli.paymentdemo.checkout.loan.LoanOptionsAdapter;
 
 /**
  * Created by james on 1/15/16.
  */
-public class DetailsFragment extends Fragment {
+public class DetailsFragment extends Fragment implements LoanOptionHandler {
 
     private CheckoutInteraction interaction;
     private CheckoutData checkoutData;
     private LoanOptionsAdapter loanOptionAdapter;
+
+    private LoanOption currentSelectedLoanOption;
 
     public static DetailsFragment getInstance(CheckoutInteraction interaction) {
         DetailsFragment fragment = new DetailsFragment();
@@ -66,16 +70,7 @@ public class DetailsFragment extends Fragment {
         headline.setText(String.format(getString(R.string.details_approved_text),
                 checkoutData.getApprovedAmount()));
 
-        // apr
-        TextView interestView = (TextView) view.findViewById(R.id.details_interest_text);
-        interestView.setText(String.format(getString(R.string.details_loan_interest_text),
-                checkoutData.getAPR(),
-                checkoutData.getInterestAmount()));
-
-        // total payment
-        TextView totalView = (TextView) view.findViewById(R.id.details_total_payments_text);
-        totalView.setText(String.format(getString(R.string.details_loan_payments_text),
-                checkoutData.getPaymentTotal()));
+        recalculateLoanDetails(view, checkoutData.getLoanOptions().get(0));
 
         // tos
         TextView tosView = (TextView) view.findViewById(R.id.details_tos_text);
@@ -85,8 +80,25 @@ public class DetailsFragment extends Fragment {
         // loan options
         RecyclerView loanOptionsView = (RecyclerView) view.findViewById(R.id.details_loan_options_list);
         loanOptionsView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        loanOptionAdapter = new LoanOptionsAdapter(getActivity(), checkoutData.getLoanOptions());
+        loanOptionAdapter = new LoanOptionsAdapter(getActivity(), this, checkoutData.getLoanOptions());
         loanOptionsView.setAdapter(loanOptionAdapter);
     }
 
+    private void recalculateLoanDetails(View view, LoanOption selectedOption) {
+        // apr
+        TextView interestView = (TextView) view.findViewById(R.id.details_interest_text);
+        interestView.setText(String.format(getString(R.string.details_loan_interest_text),
+                checkoutData.getAPR(),
+                checkoutData.getInterestAmount(selectedOption)));
+
+        // total payment
+        TextView totalView = (TextView) view.findViewById(R.id.details_total_payments_text);
+        totalView.setText(String.format(getString(R.string.details_loan_payments_text),
+                checkoutData.getPaymentTotal(selectedOption)));
+    }
+
+    @Override
+    public void optionSelected(LoanOption option) {
+        recalculateLoanDetails(getView(), option);
+    }
 }
