@@ -22,8 +22,6 @@ public class DetailsFragment extends Fragment implements LoanOptionHandler {
     private CheckoutData checkoutData;
     private LoanOptionsAdapter loanOptionAdapter;
 
-    private LoanOption currentSelectedLoanOption;
-
     public static DetailsFragment getInstance(CheckoutInteraction interaction) {
         DetailsFragment fragment = new DetailsFragment();
         fragment.interaction = interaction;
@@ -36,6 +34,7 @@ public class DetailsFragment extends Fragment implements LoanOptionHandler {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        if(interaction == null) { return ; }
         checkoutData = interaction.getCheckoutData();
     }
 
@@ -48,9 +47,11 @@ public class DetailsFragment extends Fragment implements LoanOptionHandler {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        // set confirm button label
         TextView confirmButtonLabel = (TextView) view.findViewById(R.id.button_rounded_locked_label);
         confirmButtonLabel.setText(R.string.details_confirm_button_label);
 
+        // set confirm button listener
         View confirmButton = view.findViewById(R.id.button_submit);
         confirmButton.setOnClickListener(new View.OnClickListener() {
             @Override

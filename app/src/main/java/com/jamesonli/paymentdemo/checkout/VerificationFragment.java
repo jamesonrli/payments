@@ -28,6 +28,8 @@ public class VerificationFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if(interaction == null) { return ; }
         checkoutData = interaction.getCheckoutData();
     }
 
@@ -40,9 +42,11 @@ public class VerificationFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        // set confirm button label
         TextView confirmButtonLabel = (TextView) view.findViewById(R.id.button_rounded_locked_label);
         confirmButtonLabel.setText(R.string.verify_button_label);
 
+        // set confirm button click listener
         View confirmButton = view.findViewById(R.id.button_submit);
         confirmButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,6 +56,7 @@ public class VerificationFragment extends Fragment {
         });
 
         if(checkoutData == null) { return; }
+        // set phone number text
         TextView verifySubline = (TextView) view.findViewById(R.id.verify_subline);
         verifySubline.setText(String.format(getString(R.string.verify_message), checkoutData.getPhoneNumber()));
 
