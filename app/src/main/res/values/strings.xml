@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">PaymentDemo</string>
+
+    <!-- SignUp -->
     <string name="signup_headline">Easy Monthly Payments</string>
     <string name="signup_label_first_last_name">First and Last Name</string>
     <string name="signup_label_email_address">Email Address</string>
@@ -8,15 +10,22 @@
     <string name="signup_label_ssn">Last 4 of SSN</string>
     <string name="signup_tos">By creating an account, I authorize Payment to obtain my credit report, and I agree to the Terms of Service and Electronic Disclosures</string>
     <string name="signup_label_confirm_button">CREATE ACCOUNT</string>
+
+    <!-- Verify -->
     <string name="verify_headline">Account Verification</string>
     <string name="verify_message">We sent a text message with a security pin to verify your phone number %s</string>
     <string name="verify_button_label">VERIFY</string>
+    <string name="security_pin_hint">Security Pin</string>
+
+    <!-- Completed -->
     <string name="approved_headline">Thank you for buying with Payments</string>
+
+    <!-- Details -->
     <string name="details_confirm_button_label">CONFIRM LOAN</string>
     <string name="details_loan_tos_text">First Payment due on or after %s\nBy confirming this charge I agree to the Loan Terms</string>
     <string name="details_approved_text">You\'re approved for $%.2f!</string>
     <string name="details_loan_interest_text" formatted="false">Interest (%d%% APR)\n$%.2f</string>
     <string name="details_loan_payments_text" formatted="false">Total of Payments\n$%.2f</string>
     <string name="button_loan_option_text" formatted="false">$%.2f for %d months</string>
-    <string name="security_pin_hint">Security Pin</string>
+
 </resources>

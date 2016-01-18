@@ -15,6 +15,8 @@ import com.jamesonli.paymentdemo.checkout.loan.LoanOptionsAdapter;
 
 /**
  * Created by james on 1/15/16.
+ *
+ * Allows the user to select a loan option.
  */
 public class DetailsFragment extends Fragment implements LoanOptionHandler {
 

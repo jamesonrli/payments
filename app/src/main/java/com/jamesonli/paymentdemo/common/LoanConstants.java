@@ -1,8 +1,5 @@
 package com.jamesonli.paymentdemo.common;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
-
 /**
  * Created by james on 1/16/16.
  */

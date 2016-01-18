@@ -9,6 +9,8 @@ import com.jamesonli.paymentdemo.R;
 
 /**
  * Created by james on 1/15/16.
+ *
+ * Fragment displayed after the user completes the loan process
  */
 public class ApprovedFragment extends Fragment {
 

@@ -12,4 +12,8 @@
     <dimen name="checkout_container_width">300dp</dimen>
     <dimen name="verify_icon_size">40dp</dimen>
     <dimen name="button_rounded_corners_margin">5dp</dimen>
+    <dimen name="rounded_corners_button_radius">10dp</dimen>
+    <dimen name="rounded_corners_button_stroke_size">2dp</dimen>
+    <dimen name="simple_horizontal_line_stroke_size">1dp</dimen>
+    <dimen name="simple_horizontal_line_height_size">2dp</dimen>
 </resources>

@@ -11,6 +11,8 @@ import org.w3c.dom.Text;
 
 /**
  * Created by james on 1/15/16.
+ *
+ * Allow a user to verify mobile device
  */
 public class VerificationFragment extends Fragment {
 

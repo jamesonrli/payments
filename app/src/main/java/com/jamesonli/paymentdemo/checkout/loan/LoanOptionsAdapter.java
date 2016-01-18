@@ -11,6 +11,8 @@ import java.util.List;
 
 /**
  * Created by james on 1/16/16.
+ *
+ * Adapter for loan option list. This adapter should be used with a RecyclerView
  */
 public class LoanOptionsAdapter extends RecyclerView.Adapter<LoanOptionViewHolder> {
 
@@ -43,9 +45,11 @@ public class LoanOptionsAdapter extends RecyclerView.Adapter<LoanOptionViewHolde
             currentSelectedButton.setSelected(true);
         }
 
+        // loan option button label
         holder.optionLabel.setText(String.format(context.getString(R.string.button_loan_option_text),
                 curOption.amountPerMonth, curOption.numberOfMonths));
 
+        // loan option button
         holder.buttonGroup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

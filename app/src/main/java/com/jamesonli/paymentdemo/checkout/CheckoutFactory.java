@@ -14,6 +14,10 @@ public class CheckoutFactory {
         APPROVED
     }
 
+    /**
+     * Returns the next fragment in the checkout flow
+     * Flow: SignUp->Verification->Loan Details->Approved
+     */
     public static Fragment getNextCheckoutFragment(CheckoutInteraction interaction, CheckoutState currentState) {
         switch (currentState) {
             case SIGNUP:

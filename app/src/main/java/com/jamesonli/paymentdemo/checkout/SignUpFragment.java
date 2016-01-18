@@ -10,6 +10,8 @@ import com.jamesonli.paymentdemo.R;
 
 /**
  * Created by james on 1/15/16.
+ *
+ * Allow users to SignUp for a new account
  */
 public class SignUpFragment extends Fragment {
 
@@ -33,9 +35,11 @@ public class SignUpFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        // confirm button text
         TextView confirmButtonLabel = (TextView) view.findViewById(R.id.button_rounded_locked_label);
         confirmButtonLabel.setText(R.string.signup_label_confirm_button);
 
+        // confirm button
         View confirmButton = view.findViewById(R.id.button_submit);
         confirmButton.setOnClickListener(new View.OnClickListener() {
             @Override

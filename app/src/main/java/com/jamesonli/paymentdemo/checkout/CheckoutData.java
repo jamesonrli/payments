@@ -12,6 +12,9 @@ import java.util.List;
 
 /**
  * Created by james on 1/16/16.
+ *
+ * Internally holds checkout data given by the SDK user.
+ * Stores data acquired during the checkout process.
  */
 public class CheckoutData {
 
@@ -26,6 +29,10 @@ public class CheckoutData {
         this.loanData = getLoanData();
     }
 
+    /**
+     * Generates temporary data. Returns JSONObject with approved amount and loan
+     * option details
+     */
     private JSONObject getLoanData() {
         JSONObject data = new JSONObject();
 
@@ -67,10 +74,12 @@ public class CheckoutData {
     }
 
     public double getInterestAmount(LoanOption option) {
+        // interest dollar amount is equal to total payment minus the approved amount
         return option.amountPerMonth * option.numberOfMonths - loanData.optDouble(LoanConstants.APPROVED_AMOUNT);
     }
 
     public double getPaymentTotal(LoanOption option) {
+        // payment total is equal to dollar amount per month * number of payment months
         return option.amountPerMonth * option.numberOfMonths;
     }
 
@@ -86,6 +95,7 @@ public class CheckoutData {
         JSONArray optionsArray = loanData.optJSONArray(LoanConstants.LOAN_OPTIONS);
         List<LoanOption> resultLoanOptions = new ArrayList<>();
 
+        // move JSON array to List
         for(int i=0; i<optionsArray.length(); i++) {
             JSONObject curOption = optionsArray.optJSONObject(i);
             resultLoanOptions.add(new LoanOption(curOption.optDouble(LoanConstants.AMOUNT_PER_MONTH),

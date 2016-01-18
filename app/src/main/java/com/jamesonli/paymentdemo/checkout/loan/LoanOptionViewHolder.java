@@ -4,7 +4,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 import com.jamesonli.paymentdemo.R;
-import org.w3c.dom.Text;
 
 /**
  * Created by james on 1/16/16.
